@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definindo classes</title>
+</head>
+<body>
+    <script>
+class pessoa{
+    constructor(nome,idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    falar() {
+        console.log(`Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos`);
+    }
+}
+
+let pessoa1 = new pessoa("dudinha", 17);
+pessoa1.falar();
+    </script>
+///////////////// 
+    <script>
+function pessoa(nome, idade) {
+ this.nome = nome;
+ this.idade = idade;   
+}
+
+pessoa.prototype.falar = function () {
+    console.log(`Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos`);
+};
+
+let pessoa1 = new pessoa("heloisa", 17);
+pessoa1.falar(); 
+    </script>
+    /////////////////////
+
+    <script>
+class pessoa {
+    constructor(nome){
+        this.nome = nome;
+}
+}
+
+let pessoa1 = new Pessoa("gab");
+console.log(pEssoa1.constructor === pEssoa);
+
+    </script>
+
+    <script>
+animal.prototype.falar = function () {
+    console.log("olá, sou um animal");
+};
+
+function Cachorro () {}
+
+Cachorro.prototype = Object.create(Animal.prototype);
+Cachorro.prototype.constructor = Cachorro;
+
+Cachorro.prototype.latir = function () {
+    console.log("Au au!");
+}
+
+let Cachorro1 = new Cachorro();
+
+cachorro1.falar();
+cachorro1.latir();
+
+
+
+
+
+
+    </script>
+</body>
+</html>
